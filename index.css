@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Gowun Batang", serif;
+  --font-display: "Gowun Batang", serif;
+
+  --color-sky-50: #f0f9ff;
+  --color-sky-100: #e0f2fe;
+  --color-sky-200: #bae6fd;
+  --color-sky-300: #7dd3fc;
+  --color-sky-400: #38bdf8;
+  --color-sky-500: #0ea5e9;
+
+  /* Poetic & Youthful Palette */
+  --color-poetic-rose: #FDA4AF;
+  --color-sunlit-gold: #FDE68A;
+  --color-mist-purple: #DDD6FE;
+  --color-clear-sky: #BAE6FD;
+  
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-400: #94a3b8;
+  --color-slate-600: #475569;
+  --color-slate-800: #1e293b;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-800 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .theme-card {
+    @apply bg-white/40 backdrop-blur-2xl border border-white/60 rounded-[40px] shadow-sm;
+  }
+}
+
+@layer utilities {
+  .bg-poetic-sky {
+    background: linear-gradient(135deg, 
+      #fdf2f8 0%, 
+      #f0f9ff 33%, 
+      #fffbeb 66%, 
+      #faf5ff 100%
+    );
+  }
+  
+  .text-shadow-soft {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+}
